@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return json_encode(['title' => 'qui est esse']);
 });
+
+// Route::post('/tasks', 'App\Http\Controllers\Controller@postTask');
+
+// Route::get('/car', 'App\Http\Controllers\CARController@store');
+Route::post('/car', 'App\Http\Controllers\CARController@store');
