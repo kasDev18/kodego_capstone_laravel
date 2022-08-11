@@ -24,6 +24,7 @@ class CARController extends Controller
         $car = new Car();
 
         $car->related_issues = $request->input('related_issues');
+        $car->rel_issues_others_desc = $request->input('rel_issues_others_desc');
 
 
         $car->name = $request->input('name');

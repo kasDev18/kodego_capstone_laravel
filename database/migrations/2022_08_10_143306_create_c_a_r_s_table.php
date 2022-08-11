@@ -28,6 +28,7 @@ class CreateCARSTable extends Migration
             $table->string('dept_head')->nullable();
             $table->string('classification')->nullable();
             $table->string('related_issues')->nullable();
+            $table->string('rel_issues_others_desc')->nullable();
             $table->string('station_detected')->nullable();
             $table->string('created_by')->nullable();
             $table->string('supervisor')->nullable();
