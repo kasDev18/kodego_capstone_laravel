@@ -20,4 +20,4 @@ Route::get('/', function () {
 // Route::post('/tasks', 'App\Http\Controllers\Controller@postTask');
 
 // Route::get('/car', 'App\Http\Controllers\CARController@store');
-Route::post('/car', 'App\Http\Controllers\CARController@store');
+Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');

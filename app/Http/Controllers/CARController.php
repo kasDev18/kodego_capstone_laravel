@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CAR;
+use Carbon\Carbon;
 
 class CARController extends Controller
 {
@@ -18,7 +19,7 @@ class CARController extends Controller
     //     return $car;
     // }
 
-    public function store(Request $request)
+    public function storeCARDetails(Request $request)
     {
         $car = new Car();
 
@@ -42,6 +43,7 @@ class CARController extends Controller
         $car->created_by = $request->input('created_by');
         $car->supervisor = $request->input('supervisor');
         $car->position = $request->input('position');
+        $car->created_at = Carbon::now();
         $car->save();
 
         return response()->json($request, 200);
