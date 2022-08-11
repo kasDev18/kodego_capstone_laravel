@@ -26,6 +26,12 @@ class CreateCARSTable extends Migration
             $table->integer('qty')->nullable();
             $table->integer('doc_number')->nullable();
             $table->string('dept_head')->nullable();
+            $table->string('classification')->nullable();
+            $table->string('related_issues')->nullable();
+            $table->string('station_detected')->nullable();
+            $table->string('created_by')->nullable();
+            $table->string('supervisor')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

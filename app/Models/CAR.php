@@ -9,6 +9,6 @@ class CAR extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','department','date','product_type','product_name','supplier','reject_desc', 'reject_qty','qty','doc_number','dept_head'];
+    protected $fillable = ['name','department','date','product_type','product_name','supplier','reject_desc', 'reject_qty','qty','doc_number','dept_head', 'classification','created_by','supervisor', 'position','related_issues','station_detected'];
 
 }

@@ -22,6 +22,15 @@ class CARController extends Controller
     {
         $car = new Car();
 
+        // $rel_issues = $request->input('related_issues');
+        // if($rel_issues !== null){
+        //     $rel_issues_array = implode(',', $rel_issues);
+        //     $car->related_issues = $rel_issues_array;
+        // }
+
+        $car->related_issues = $request->input('related_issues');
+
+
         $car->name = $request->input('name');
         $car->department = $request->input('department');
         $car->date = $request->input('date');
@@ -32,6 +41,12 @@ class CARController extends Controller
         $car->reject_qty = $request->input('qty');
         $car->doc_number = $request->input('doc_number');
         $car->dept_head = $request->input('dept_head');
+        $car->classification = $request->input('classification');
+        // $car->related_issues = implode('', $request->input('rel_issues'));
+        $car->station_detected = $request->input('station_detected');
+        $car->created_by = $request->input('created_by');
+        $car->supervisor = $request->input('supervisor');
+        $car->position = $request->input('position');
         $car->save();
 
         return response()->json($request, 200);
