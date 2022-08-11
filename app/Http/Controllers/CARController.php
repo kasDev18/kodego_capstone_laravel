@@ -21,7 +21,7 @@ class CARController extends Controller
 
     public function storeCARDetails(Request $request)
     {
-        $car = new Car();
+        $car = new CAR();
 
         $car->related_issues = $request->input('related_issues');
         $car->rel_issues_others_desc = $request->input('rel_issues_others_desc');

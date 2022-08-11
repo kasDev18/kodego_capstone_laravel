@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 // Route::get('/car', 'App\Http\Controllers\CARController@store');
 Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');
+Route::post('/qmr_paper', 'App\Http\Controllers\QMRPaperController@storeQMRPaperDetails');
