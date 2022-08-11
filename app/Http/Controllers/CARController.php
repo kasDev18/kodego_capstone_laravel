@@ -22,12 +22,6 @@ class CARController extends Controller
     {
         $car = new Car();
 
-        // $rel_issues = $request->input('related_issues');
-        // if($rel_issues !== null){
-        //     $rel_issues_array = implode(',', $rel_issues);
-        //     $car->related_issues = $rel_issues_array;
-        // }
-
         $car->related_issues = $request->input('related_issues');
 
 
@@ -38,7 +32,8 @@ class CARController extends Controller
         $car->product_name = $request->input('product_name');
         $car->supplier = $request->input('supplier');
         $car->reject_desc = $request->input('reject_desc');
-        $car->reject_qty = $request->input('qty');
+        $car->reject_qty = $request->input('reject_qty');
+        $car->qty = $request->input('qty');
         $car->doc_number = $request->input('doc_number');
         $car->dept_head = $request->input('dept_head');
         $car->classification = $request->input('classification');
@@ -50,6 +45,6 @@ class CARController extends Controller
         $car->save();
 
         return response()->json($request, 200);
-        // return redirect()->route('car')->withStatus(__('Content Type added'));
+        // return redirect()->route('https://fpc-qa.netlify.app/')->withStatus(__('Content Type added'));
     }
 }
