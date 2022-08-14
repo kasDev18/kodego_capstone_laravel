@@ -8,16 +8,12 @@ use Carbon\Carbon;
 
 class CARController extends Controller
 {
-    // public function store()
-    // {
-    //     $car = Car::all();
-    //     // $car = new CAR();
+    public function getData()
+    {
+        $car = CAR::all();
 
-    //     // $car->name = $request->input('name');
-    //     // $car->save();
-
-    //     return $car;
-    // }
+        return $car;
+    }
 
     public function storeCARDetails(Request $request)
     {

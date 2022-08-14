@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // CAR
+Route::get('/car', 'App\Http\Controllers\CARController@getData');
 Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');
 
 // QMR Paper
