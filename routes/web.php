@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return json_encode(['title' => 'qui est esse']);
-});
+// Route::get('/', function () {
+//     return json_encode(['title' => 'qui est esse']);
+// });
 
-// Route::post('/tasks', 'App\Http\Controllers\Controller@postTask');
-
-// Route::get('/car', 'App\Http\Controllers\CARController@store');
+// CAR
 Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');
+
+// QMR Paper
+Route::get('/qmr_paper', 'App\Http\Controllers\QMRPaperController@getData');
 Route::post('/qmr_paper', 'App\Http\Controllers\QMRPaperController@storeQMRPaperDetails');
+
+// QMR Non-Paper
+Route::post('/qmr_ink', 'App\Http\Controllers\InkController@storeInkDetails');

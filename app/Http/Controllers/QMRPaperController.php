@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class QMRPaperController extends Controller
 {
+    public function getData()
+    {
+        $qmr_paper = QmrPaper::all();
+
+        return $qmr_paper;
+    }
+
     public function storeQMRPaperDetails(Request $request)
     {
         $qmr_paper = new QMRPaper();
