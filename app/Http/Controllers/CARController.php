@@ -35,7 +35,6 @@ class CARController extends Controller
         $car->doc_number = $request->input('doc_number');
         $car->dept_head = $request->input('dept_head');
         $car->classification = $request->input('classification');
-        // $car->related_issues = implode('', $request->input('rel_issues'));
         $car->station_detected = $request->input('station_detected');
         $car->created_by = $request->input('created_by');
         $car->supervisor = $request->input('supervisor');
@@ -44,6 +43,10 @@ class CARController extends Controller
         $car->save();
 
         return response()->json($request, 200);
-        // return redirect()->route('https://fpc-qa.netlify.app/')->withStatus(__('Content Type added'));
+    }
+
+    public function deleteData(Request $request){ 
+        $car = CAR::where('id',$request->id)->delete();
+        return response()->json($car);
     }
 }

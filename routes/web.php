@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 // CAR
 Route::get('/car', 'App\Http\Controllers\CARController@getData');
 Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');
+Route::delete('/car', 'App\Http\Controllers\CARController@deleteData');
 
 // QMR Paper
 Route::get('/qmr_paper', 'App\Http\Controllers\QMRPaperController@getData');
