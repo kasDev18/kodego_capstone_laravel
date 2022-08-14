@@ -47,4 +47,11 @@ class InkController extends Controller
 
         return response()->json($request);
     }
+
+    public function deleteData(Request $request)
+    {
+        $qmr_np_ink = QmrNonPaperInk::where('id', $request->id)->delete();
+
+        return response()->json($qmr_np_ink);
+    }
 }

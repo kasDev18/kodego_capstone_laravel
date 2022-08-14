@@ -47,4 +47,11 @@ class QMRPaperController extends Controller
         
         return response()->json($request);
     }
+
+    public function deleteData(Request $request)
+    {
+       $qmr_paper = QmrPaper::where('id', $request->id)->delete();
+
+       return response()->json($qmr_paper);
+    }
 }
