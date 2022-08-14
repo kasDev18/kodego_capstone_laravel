@@ -25,4 +25,5 @@ Route::get('/qmr_paper', 'App\Http\Controllers\QMRPaperController@getData');
 Route::post('/qmr_paper', 'App\Http\Controllers\QMRPaperController@storeQMRPaperDetails');
 
 // QMR Non-Paper
+Route::get('/qmr_ink', 'App\Http\Controllers\InkController@getData');
 Route::post('/qmr_ink', 'App\Http\Controllers\InkController@storeInkDetails');

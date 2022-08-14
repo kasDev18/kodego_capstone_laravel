@@ -7,6 +7,13 @@ use App\Models\QmrNonPaperInk;
 
 class InkController extends Controller
 {
+    public function getData()
+    {
+       $qmr_np_ink = QmrNonPaperInk::all();
+
+       return $qmr_np_ink;
+    }
+
     public function storeInkDetails(Request $request)
     {
         $qmr_np_ink = new QmrNonPaperInk();
