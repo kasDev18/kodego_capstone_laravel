@@ -19,7 +19,7 @@ class InkController extends Controller
         $qmr_np_ink = new QmrNonPaperInk();
 
         $qmr_np_ink->name = $request->input('name');
-        $qmr_np_ink->department = $request->input('department');
+        $qmr_np_ink->ink_color = $request->input('ink_color');
         $qmr_np_ink->date = $request->input('date');
         $qmr_np_ink->prod_type = $request->input('prod_type');
         $qmr_np_ink->prod_name = $request->input('prod_name');

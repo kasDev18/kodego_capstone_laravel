@@ -16,7 +16,7 @@ class CreateQmrNonPaperInksTable extends Migration
         Schema::create('qmr_non_paper_inks', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('department')->nullable();
+            $table->string('ink_color')->nullable();
             $table->date('date')->nullable();
             $table->string('prod_type')->nullable();
             $table->string('prod_name')->nullable();
