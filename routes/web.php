@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return json_encode(['title' => 'qui est esse']);
-// });
+Route::get('/', function () {
+    return ('welcome');
+});
 
 // CAR
 Route::get('/car', 'App\Http\Controllers\CARController@getData');
