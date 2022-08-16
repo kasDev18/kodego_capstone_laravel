@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/car', 'App\Http\Controllers\CARController@getData');
 Route::post('/car', 'App\Http\Controllers\CARController@storeCARDetails');
 Route::delete('/car', 'App\Http\Controllers\CARController@deleteData');
+Route::patch('/car', 'App\Http\Controllers\CARController@updateData');
 
 // QMR Paper
 Route::get('/qmr_paper', 'App\Http\Controllers\QMRPaperController@getData');
@@ -33,3 +34,8 @@ Route::get('/qmr_ink', 'App\Http\Controllers\InkController@getData');
 Route::post('/qmr_ink', 'App\Http\Controllers\InkController@storeInkDetails');
 Route::delete('/qmr_ink', 'App\Http\Controllers\InkController@deleteData');
 Route::patch('/qmr_ink', 'App\Http\Controllers\InkController@updateData');
+
+// Dashboard
+Route::get('/dashboard/qmr_paper', 'App\Http\Controllers\DashboardController@getQMRPaperCount');
+Route::get('/dashboard/qmr_ink', 'App\Http\Controllers\DashboardController@getQMRInkCount');
+Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCount');
