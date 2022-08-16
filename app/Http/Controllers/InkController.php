@@ -9,8 +9,7 @@ class InkController extends Controller
 {
     public function getData()
     {
-    //    $qmr_np_ink = QmrNonPaperInk::all();
-       $qmr_np_ink = QmrNonPaperInk::where('deleted', 0);
+       $qmr_np_ink = QmrNonPaperInk::all();
 
        return $qmr_np_ink;
     }
