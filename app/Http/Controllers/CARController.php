@@ -10,9 +10,9 @@ class CARController extends Controller
 {
     public function getData()
     {
-        $car = CAR::where('deleted', 0);
+        $car = CAR::all();
 
-        return $car;
+        return response()->json($car);
     }
 
     public function storeCARDetails(Request $request)
