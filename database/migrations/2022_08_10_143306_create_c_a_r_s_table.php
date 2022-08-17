@@ -33,7 +33,7 @@ class CreateCARSTable extends Migration
             $table->string('created_by')->nullable();
             $table->string('supervisor')->nullable();
             $table->string('position')->nullable();
-            $table->string('deleted')->nullable();
+            $table->integer('deleted')->nullable();
             $table->timestamps();
         });
     }
