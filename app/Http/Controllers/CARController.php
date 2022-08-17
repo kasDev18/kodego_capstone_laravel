@@ -40,7 +40,7 @@ class CARController extends Controller
         $car->supervisor = $request->input('supervisor');
         $car->position = $request->input('position');
         $car->created_at = Carbon::now();
-        $car->deleted = 0;
+        $car->deleted = '0';
         $car->save();
 
         return response()->json($request, 200);
