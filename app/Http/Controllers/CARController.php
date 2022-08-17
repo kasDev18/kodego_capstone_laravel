@@ -12,7 +12,7 @@ class CARController extends Controller
     {
         $car = CAR::all();
 
-        return response()->json($car);
+        return $car;
     }
 
     public function storeCARDetails(Request $request)
