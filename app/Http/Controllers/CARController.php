@@ -10,7 +10,7 @@ class CARController extends Controller
 {
     public function getData()
     {
-        $car = CAR::all();
+        $car = CAR::where('deleted', 0);
 
         return $car;
     }
