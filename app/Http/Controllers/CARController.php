@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\CAR;
 use Carbon\Carbon;
 
@@ -10,9 +11,9 @@ class CARController extends Controller
 {
     public function getData()
     {
-        $car = CAR::all();
+        // $car = CAR::all();
 
-        return $car;
+        return DB::select("select * from c_a_r_s");
     }
 
     public function storeCARDetails(Request $request)
