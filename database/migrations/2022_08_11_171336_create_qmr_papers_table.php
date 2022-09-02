@@ -37,6 +37,8 @@ class CreateQmrPapersTable extends Migration
             $table->string('missing_docs')->nullable();
             $table->string('signed')->nullable();
             $table->string('tampering')->nullable();
+            $table->string('liquid_contamination')->nullable();
+            $table->string('crumpled')->nullable();
             $table->string('orig_docs')->nullable();
             $table->string('secured')->nullable();
             $table->timestamps();

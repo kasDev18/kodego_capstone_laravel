@@ -39,3 +39,7 @@ Route::patch('/qmr_ink', 'App\Http\Controllers\InkController@updateData');
 Route::get('/dashboard/qmr_paper', 'App\Http\Controllers\DashboardController@getQMRPaperCount');
 Route::get('/dashboard/qmr_ink', 'App\Http\Controllers\DashboardController@getQMRInkCount');
 Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCount');
+
+// Users
+// Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
+// Route::post('/login', 'App\Http\Controllers\UserController@getLoginData');

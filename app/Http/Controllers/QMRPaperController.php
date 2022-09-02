@@ -40,6 +40,8 @@ class QMRPaperController extends Controller
         $qmr_paper->missing_docs = $request->input('missing_docs');
         $qmr_paper->signed = $request->input('signed');
         $qmr_paper->tampering = $request->input('tampering');
+        $qmr_paper->liquid_contamination = $request->input('liquid_contamination');
+        $qmr_paper->crumpled = $request->input('crumpled');
         $qmr_paper->orig_docs = $request->input('orig_docs');
         $qmr_paper->secured = $request->input('secured');
 
@@ -79,7 +81,9 @@ class QMRPaperController extends Controller
         $qmr_paper->proper_arrangement = $request->input('proper_arrangement');
         $qmr_paper->missing_docs = $request->input('missing_docs');
         $qmr_paper->signed = $request->input('signed');
+        $qmr_paper->liquid_contamination = $request->input('liquid_contamination');
         $qmr_paper->tampering = $request->input('tampering');
+        $qmr_paper->crumpled = $request->input('crumpled');
         $qmr_paper->orig_docs = $request->input('orig_docs');
         $qmr_paper->secured = $request->input('secured');
 
@@ -106,6 +110,8 @@ class QMRPaperController extends Controller
             'missing_docs' => $qmr_paper->missing_docs,
             'signed' => $qmr_paper->signed,
             'tampering' => $qmr_paper->tampering,
+            'liquid_contamination' => $qmr_paper->liquid_contamination,
+            'crumpled' => $qmr_paper->crumpled,
             'orig_docs' => $qmr_paper->orig_docs,
             'secured' => $qmr_paper->secured,
         ]);
