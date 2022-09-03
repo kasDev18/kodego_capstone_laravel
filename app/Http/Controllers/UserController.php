@@ -34,7 +34,7 @@ class UserController extends Controller
         // }
         // return $user;
 
-        if(!Auth::attempt($request->only('username','password'))){
+        if(!Auth::attempt($request->only('username','password','position'))){
             return response(
                 ["error" => "Email or password not matched!"]
             , Response::HTTP_UNAUTHORIZED);
