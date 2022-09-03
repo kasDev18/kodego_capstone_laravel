@@ -14,7 +14,9 @@ class UserController extends Controller
     {
         $user = new User();
 
-        $user->username = $request->input('username');
+        $user->username = ucfirst($request->input('username'));
+        $user->id_num = $request->input('id_num');
+        $user->position = ucfirst($request->input('position'));
         $user->password = Hash::make($request->input('password'));
 
         $user->save();
