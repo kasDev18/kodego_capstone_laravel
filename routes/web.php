@@ -42,4 +42,9 @@ Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCou
 
 // Users
 // Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
-// Route::post('/login', 'App\Http\Controllers\UserController@getLoginData');
+Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
+Route::post('/login', 'App\Http\Controllers\UserController@getLoginData');
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::get('/auth', 'App\Http\Controllers\UserController@getAuthenticate');
+});
