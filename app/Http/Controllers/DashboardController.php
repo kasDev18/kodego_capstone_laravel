@@ -3,16 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\QmrPaper;
 use App\Models\QmrNonPaperInk;
 use App\Models\CAR;
 
 class DashboardController extends Controller
 {
+    public function getUsersCount()
+    {
+        $users_count = User::count();
+
+        return response()->json($users_count);
+    }
+
     public function getQMRPaperCount()
     {
         $qmr_paper_count = QmrPaper::count();
-        // $qmr_ink = QmrNonPaperInk::count()
 
         return response()->json($qmr_paper_count);
     }

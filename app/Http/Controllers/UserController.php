@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+// use App\Models\UserAdmin;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,13 +28,6 @@ class UserController extends Controller
 
     public function getLoginData(Request $request)
     {
-        // $user = User::where('username', $request->username)->first();
-        // if(!$user || !Hash::check($request->password, $user->password))
-        // {
-        //     return ["error" => "Email or password not matched!"];
-        // }
-        // return $user;
-
         if(!Auth::attempt($request->only('username','password','position'))){
             return response(
                 ["error" => "Email or password not matched!"]

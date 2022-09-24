@@ -36,6 +36,7 @@ Route::delete('/qmr_ink', 'App\Http\Controllers\InkController@deleteData');
 Route::patch('/qmr_ink', 'App\Http\Controllers\InkController@updateData');
 
 // Dashboard
+Route::get('/dashboard/users', 'App\Http\Controllers\DashboardController@getUsersCount');
 Route::get('/dashboard/qmr_paper', 'App\Http\Controllers\DashboardController@getQMRPaperCount');
 Route::get('/dashboard/qmr_ink', 'App\Http\Controllers\DashboardController@getQMRInkCount');
 Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCount');
