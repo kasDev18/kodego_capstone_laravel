@@ -11,6 +11,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
+
+    public function getData()
+    {
+       $user = User::all();
+
+       return $user;
+    }
+
     public function storeUserDetails(Request $request)
     {
         $user = new User();

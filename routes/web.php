@@ -42,7 +42,7 @@ Route::get('/dashboard/qmr_ink', 'App\Http\Controllers\DashboardController@getQM
 Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCount');
 
 // Users
-// Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
+Route::get('/users', 'App\Http\Controllers\UserController@getData');
 Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
 Route::post('/login', 'App\Http\Controllers\UserController@getLoginData');
 
