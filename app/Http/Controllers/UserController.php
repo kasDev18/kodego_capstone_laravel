@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function getData()
     {
-       $user = User::all();
+       $user = User::orderBy('id', 'desc')->get();
 
        return $user;
     }
@@ -60,4 +60,6 @@ class UserController extends Controller
     {
         return Auth::user();
     }
+
+   
 }

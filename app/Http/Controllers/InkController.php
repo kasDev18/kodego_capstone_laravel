@@ -9,7 +9,7 @@ class InkController extends Controller
 {
     public function getData()
     {
-       $qmr_np_ink = QmrNonPaperInk::all();
+       $qmr_np_ink = QmrNonPaperInk::orderBy('id', 'desc')->get();
 
        return $qmr_np_ink;
     }

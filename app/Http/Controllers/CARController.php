@@ -11,9 +11,9 @@ class CARController extends Controller
 {
     public function getData()
     {
-        // $car = CAR::all();
+        $car = CAR::orderBy('id', 'desc')->get();
 
-        return DB::select("select * from c_a_r_s");
+        return $car;
     }
 
     public function storeCARDetails(Request $request)

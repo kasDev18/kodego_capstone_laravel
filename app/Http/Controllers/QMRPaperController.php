@@ -9,7 +9,7 @@ class QMRPaperController extends Controller
 {
     public function getData()
     {
-        $qmr_paper = QmrPaper::all();
+        $qmr_paper = QmrPaper::orderBy('id', 'desc')->get();
 
         return $qmr_paper;
     }
