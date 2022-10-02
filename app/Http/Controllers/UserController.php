@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function getData()
     {
-       $user = User::orderBy('id', 'desc')->get();
+       $user = User::orderBy('id', 'asc')->get();
 
        return $user;
     }
@@ -61,5 +61,10 @@ class UserController extends Controller
         return Auth::user();
     }
 
-   
+    public function userPagination()
+    {
+        $user = User::query()->orderBy('id', 'desc')->paginate(6);
+        
+        return response($user, 200);
+    }
 }

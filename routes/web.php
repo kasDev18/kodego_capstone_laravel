@@ -43,6 +43,7 @@ Route::get('/dashboard/car', 'App\Http\Controllers\DashboardController@getCARCou
 
 // Users
 Route::get('/users', 'App\Http\Controllers\UserController@getData');
+Route::get('/users/list', 'App\Http\Controllers\UserController@userPagination');
 Route::post('/users', 'App\Http\Controllers\UserController@storeUserDetails');
 Route::post('/login', 'App\Http\Controllers\UserController@getLoginData');
 
